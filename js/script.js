@@ -20,7 +20,7 @@ var partnerBlock = {
 
     toggleShowing: function(elemToToggle) {
         $(elemToToggle).stop(true, false);
-        $(elemToToggle).slideToggle(1000);
+        $(elemToToggle).slideToggle("fast");
     },
 
     setListenerOnButton: function() {
@@ -123,4 +123,35 @@ $(window).load(function() {
 
     dropDowns.setUpDropDown($(".login-dropdown"), $(".signin-dropdown"));
     dropDowns.setUpAdditionalListener($(".login-dropdown"));
+});
+
+$(window).load(function () {
+    var $wrapper = $('.shop-content'),
+        $plus = $wrapper.find('.plus'),
+        $minus = $wrapper.find('.minus');
+
+    var datacount;
+    $plus.on('click touch', function (e) {
+        e.preventDefault();
+
+        var $elem = $(this).parent().find('.num');
+        datacount = $elem.data('count');
+        datacount++;
+        $elem.data('count', datacount);
+
+        $elem.val(datacount);
+    });
+
+    $minus.on('click touch', function (e) {
+        e.preventDefault();
+
+        var $elem = $(this).parent().find('.num');
+        datacount = $elem.data('count');
+
+        if (datacount > 1) {
+            datacount--;
+            $elem.data('count', datacount);
+            $elem.val(datacount);
+        }
+    })
 });
