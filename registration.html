@@ -13,7 +13,6 @@
 
     <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -93,7 +92,15 @@
                             <li><a href="buisnes.html">Бизнес</a></li>
                             <li><a href="events.html">Мероприятия</a></li>
                             <li><a href="news.html">Новости</a></li>
-                            <li><a href="materials.html">Материалы</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Материалы <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="documents.html">Документы</a></li>
+                                    <li><a href="teaching.html">Обучение</a></li>
+                                    <li><a href="technologies.html">Технологии</a></li>
+                                    <li><a href="congress2017.html">Конгресс 2017</a></li>
+                                </ul>
+                            </li>
                             <li><a href="shop.html">Магазин</a></li>
                             <li><a href="contacts.html">Контакты</a></li>
                         </ul>
@@ -125,80 +132,25 @@
                 <div>
                     <ul class="list-inline">
                         <li><img src="images/user.png"/> </li>
-                        <li>UsernameHere</li>
-                        <li>Не вы? <a href="#">Выход</a></li>
+                        <li><a href="login.html">Войти в аккаунт</a> &nbsp; | </li>
+                        <li><a href="registration.html">Регистрация</a> &nbsp; | </li>
+                        <li><a href="forgotpass.html">Восстановление пароля</a></li>
                     </ul>
                 </div>
-
-                <ul class="list-inline partner-menu">
-                    <li>
-                        <p>Счет</p>
-                        <ul>
-                            <li><a href="#">История</a></li>
-                            <li><a href="#">Перевод</a></li>
-                            <li><a href="#">Вывод</a></li>
-                            <li><a href="#">Обмен</a></li>
-                        </ul>
-                    </li>
-                    <li class="hidden-lg hidden-md clearfix"></li>
-                    <li>
-                        <p>Операции</p>
-                        <ul>
-                            <li><a href="#">Ручная регистрация</a></li>
-                            <li><a href="#">Заказать сертификат</a></li>
-                            <li><a href="#">Промо-коды</a></li>
-                        </ul>
-                    </li>
-                    <li class="hidden-lg hidden-md clearfix"></li>
-                    <li>
-                        <p>Статистика</p>
-                        <ul>
-                            <li><a href="#">Мои заказы</a></li>
-                            <li><a href="#">Клиентские заказы</a></li>
-                            <li><a href="#">Партнерские заказы</a></li>
-                            <li><a href="#">Моя статистика</a></li>
-                            <li><a href="#">Статистика лично приглашенных</a></li>
-                            <li><a href="#">Партнерская статистика</a></li>
-                            <li><a href="#">Структура</a></li>
-                        </ul>
-                    </li>
-                    <li class="hidden-lg hidden-md clearfix"></li>
-                    <li>
-                        <p>Бизнес-кейсы</p>
-                        <ul>
-                            <li><a href="#">Партнерская программа</a></li>
-                            <li><a href="#">Положение о партнерах</a></li>
-                            <li><a href="#">Обучение</a></li>
-                            <li><a href="#">Ссылки и код</a></li>
-                            <li><a href="#">Промо-материалы</a></li>
-                        </ul>
-                    </li>
-                    <li class="hidden-lg hidden-md clearfix"></li>
-                    <li>
-                        <p>Склад</p>
-                        <ul>
-                            <li><a href="#">Управление заказами</a></li>
-                            <li><a href="#">Управление складом</a></li>
-                            <li><a href="#">Заказы на исполнение</a></li>
-                            <li><a href="#">Операции исполненные</a></li>
-                            <li><a href="#">Операции неисполненные</a></li>
-                            <li><a href="#">Движение товара</a></li>
-                            <li><a href="#">Инвентаризация</a></li>
-                            <li><a href="#">Отчеты по инвентаризации</a></li>
-                            <li><a href="#">Написать отчет в свободной форме</a></li>
-                            <li><a href="#">Отчеты в свободной форме</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
             </div>
         </div>
     </div>
     <!-- CONTENT -->
     <div class="row">
+        <div class="col-lg-12">
+            <ul class="list-inline breadcrumb">
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+            </ul>
+        </div>
         <div class="col-sm-offset-2 col-sm-10">
             <form name="formCheckout" method="post" action="registration.php">
-                <table height="100%" border="0" cellspacing="0" cellpadding="0">
+                <table class="table-responsive" border="0" cellspacing="0" cellpadding="0">
                     <tbody><tr>
                         <td colspan="3">
                             <h1>Пригласительный код</h1></td>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Biomedis</title>
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div class="container-fluid main-wrapper">
+    <!-- HEADER -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 logo">
+            <a href="index.html"><img src="images/logo.png"/></a>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+            <ul class="list-inline top-menu">
+                <li class="signin-dropdown"><p>Вход</p></li>
+                <li class="language-selector"><p>RU</p></li>
+                <li class="search-block">
+                    <form class="form-inline">
+                        <input placeholder="Поиск"/>
+                        <button>
+                            <img src="images/search.png"/>
+                        </button>
+                    </form>
+                </li>
+                <li class="basket">
+                    <p>
+                        <img src="images/basket.png"/>
+                        <a href="#" class="gray-color">Корзина</a> &nbsp; <span style="font-size:10pt;">0.0 ₽</span>
+                    </p>
+                </li>
+            </ul>
+            <div class="languages">
+                <ul>
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">DE</a></li>
+                    <li><a href="#">GR</a></li>
+                </ul>
+            </div>
+
+            <div class="login-dropdown">
+                <ul>
+                    <li><a href="login.html">Вход</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="forgotpass.html">Восстановление пароля</a></li>
+                    <li><a href="partner.html">Партнеркая программа</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="socials header-socials">
+            <ul class="list-inline header social-images">
+                <li><a href="#"><img src="images/socials/instagram.png"/></a></li>
+                <li><a href="#"><img src="images/socials/youtube.png"/></a></li>
+                <li><a href="#"><img src="images/socials/vk.png"/></a></li>
+                <li><a href="#"><img src="images/socials/ok.png"/></a></li>
+                <li><a href="#"><img src="images/socials/facebook.png"/></a></li>
+                <li><a href="#"><img src="images/socials/twitter.png"/></a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="row">
+        <div class="col-lg-12 menu-biomedis">
+            <nav class="navbar navbar-default navbar-biomedis">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbar-main">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-main">
+                        <ul class="nav navbar-nav">
+                            <li><a href="production.html">Продукция</a></li>
+                            <li><a href="company.html">Компания</a></li>
+                            <li><a href="buisnes.html">Бизнес</a></li>
+                            <li><a href="events.html">Мероприятия</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Материалы <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="documents.html">Документы</a></li>
+                                    <li><a href="teaching.html">Обучение</a></li>
+                                    <li><a href="technologies.html">Технологии</a></li>
+                                    <li><a href="congress2017.html">Конгресс 2017</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop.html">Магазин</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="partner-item">
+                                <a href="#" class="partners-toggle">
+                                        <span class="hidden-xs partners">
+                                            <img src="images/partners.png"/>
+                                        </span>
+                                    <span class="hidden-sm hidden-md hidden-lg">
+                                            Партнерам
+                                        </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="partner-block">
+                    <span class="close-partner-block hidden-lg hidden-sm hidden-md">
+                        X
+                    </span>
+                <div>
+                    <ul class="list-inline">
+                        <li><img src="images/user.png"/> </li>
+                        <li><a href="login.html">Войти в аккаунт</a> &nbsp; | </li>
+                        <li><a href="registration.html">Регистрация</a> &nbsp; | </li>
+                        <li><a href="forgotpass.html">Восстановление пароля</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="list-inline breadcrumb">
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="partner.html">Мой аккаунт</a></li>
+                <li><a href="edit.html">Редактирование аккаунта</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-offset-1 col-sm-10">
+            <form name="formCheckout" method="post" action="edit.php">
+                <table class="table-responsive" border="0" cellspacing="0" cellpadding="0">
+                    <tbody><tr>
+                        <td colspan="3">
+                            <h1>Пользовательская информация</h1>
+                        </td>
+                    </tr>
+
+                    <tr><td height="5" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Текущий пароль <font color="#CC0000">*</font></td>
+                        <td width="20">&nbsp;</td>
+                        <td>
+                            <input type="PASSWORD" name="oldPassword" value="" size="15">		</td>
+                    </tr>
+
+                    <tr><td height="8" colspan="3"></td></tr>
+                    <tr><td colspan="3"><hr></td></tr>
+                    <tr><td height="1" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">E-mail <font color="#CC0000">*</font></td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="email" value="username@site.ru" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Новый пароль <font color="#CC0000">*</font></td>
+                        <td></td>
+                        <td>
+                            <input type="PASSWORD" name="password1" value="" size="15">		</td>
+                    </tr>
+
+                    <tr><td height="5" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Повторить пароль <font color="#CC0000">*</font></td>
+                        <td></td>
+                        <td>
+                            <input type="PASSWORD" name="password2" value="" size="15">		</td>
+                    </tr>
+
+                    <tr><td height="5" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Дата рождения <font color="#CC0000">*</font></td>
+                        <td></td>
+                        <td>
+                            <select name="bornDay"><option value="0">День</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13" selected="">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select name="bornMonth"><option value="0">Месяц</option><option value="1">Январь</option><option value="2" selected="">Февраль</option><option value="3">Март</option><option value="4">Апрель</option><option value="5">Май</option><option value="6">Июнь</option><option value="7">Июль</option><option value="8">Август</option><option value="9">Сентябрь</option><option value="10">Октябрь</option><option value="11">Ноябрь</option><option value="12">Декабрь</option></select><select name="bornYear"><option value="0">Год</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959" selected="">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option></select>		</td>
+                    </tr>
+
+
+                    <tr><td height="40" colspan="3"></td></tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <h1>Информация о доставке</h1>
+                        </td>
+                    </tr>
+
+                    <tr><td height="5" colspan="3"></td></tr>
+
+
+                    <tr>
+                        <td align="left">Имя</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="firstNameShipping" value="Иван" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Отчество</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="middleNameShipping" value="Иванович" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Фамилия</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="lastNameShipping" value="Иванов" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Адрес</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="addressShipping" value="д. 236, кв.11" size="45">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Город</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="cityShipping" value="Самый лучший город" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Страна</td>
+                        <td></td>
+                        <td>
+                            <select name="countryShipping"><option value="0">--- Выберите страну ---</option><option value="225">APO/FPO</option><option value="15">Австралия</option><option value="16">Австрия</option><option value="17">Азербайджан</option><option value="5">Албания</option><option value="6">Алжир</option><option value="7">Американское Самоа</option><option value="9">Ангола</option><option value="10">Ангуилья</option><option value="8">Андорра</option><option value="11">Антигуа и Барбуда</option><option value="12">Аргентина</option><option value="13">Армения</option><option value="14">Аруба</option><option value="4">Афганистан</option><option value="18">Багамы</option><option value="20">Бангладеш</option><option value="21">Барбадос</option><option value="19">Бахрейн</option><option value="22">Беларусь</option><option value="24">Белиз</option><option value="23">Бельгия</option><option value="25">Бенин</option><option value="26">Бермуды</option><option value="34">Болгария</option><option value="28">Боливия</option><option value="29">Босния и Герцеговина</option><option value="30">Ботсвана</option><option value="31">Бразилия</option><option value="32">Британские Виргинские Острова</option><option value="33">Бруней</option><option value="27">Брутан</option><option value="35">Буркина-Фасо</option><option value="37">Бурунди</option><option value="213">Вануату</option><option value="214">Ватикан</option><option value="3">Великобритания</option><option value="93">Венгрия</option><option value="215">Венесуэла</option><option value="217">Виргинские острова</option><option value="216">Вьетнам</option><option value="74">Габон</option><option value="90">Гаити</option><option value="75">Гамбия</option><option value="78">Гана</option><option value="83">Гваделупа</option><option value="85">Гватемала</option><option value="89">Гвиана</option><option value="87">Гвинея</option><option value="88">Гвинея-Биссау</option><option value="77">Германия</option><option value="86">Гернси, остров</option><option value="79">Гибралтар</option><option value="92">Гонг-Конг</option><option value="91">Гондурас</option><option value="82">Гренада</option><option value="81">Гренландия</option><option value="80">Греция</option><option value="76">Грузия</option><option value="84">Гуам</option><option value="57">Дания</option><option value="105">Джерси</option><option value="58">Джибути</option><option value="59">Доминика</option><option value="60">Доминиканская республика</option><option value="62">Египет</option><option value="223">Замбия</option><option value="219">Западная Сахара</option><option value="220">Западное Самоа</option><option value="224">Зимбабве</option><option value="100">Израиль</option><option value="95">Индия</option><option value="96">Индонезия</option><option value="106">Иордания</option><option value="227">Иран</option><option value="99">Ирландия</option><option value="94">Исландия</option><option value="186">Испания</option><option value="101">Италия</option><option value="221">Йемен</option><option value="107">Казахстан</option><option value="41">Каймановы острова</option><option value="38">Камбоджа</option><option value="39">Камерун</option><option value="2">Канада</option><option value="40">Капо-верде</option><option value="166">Катар</option><option value="108">Кения</option><option value="55">Кипр</option><option value="109">Кирибати</option><option value="45">Китай</option><option value="46">Колумбия</option><option value="47">Коморские острова</option><option value="49">Конго</option><option value="48">Конго, Демократическая республика</option><option value="51">Коста-Рика</option><option value="52">Кот д`Ивуар</option><option value="112">Кувейт</option><option value="113">Кыргызстан</option><option value="114">Лаос</option><option value="115">Латвия</option><option value="116">Ливан</option><option value="121">Литва</option><option value="120">Лихтенштейн</option><option value="122">Люксембург</option><option value="134">Маврикий</option><option value="133">Мавритания</option><option value="125">Мадагаскар</option><option value="135">Майотта</option><option value="123">Макао</option><option value="124">Македония</option><option value="126">Малави</option><option value="127">Малайзия</option><option value="129">Мали</option><option value="128">Мальдивские острова</option><option value="130">Мальта</option><option value="141">Марокко</option><option value="132">Мартиника</option><option value="131">Маршалловы острова</option><option value="136">Мексика</option><option value="226">Микронезия</option><option value="142">Мозамбик</option><option value="137">Молдова</option><option value="138">Монако</option><option value="139">Монголия</option><option value="36">Мьянма</option><option value="143">Намибия</option><option value="144">Науру</option><option value="145">Непал</option><option value="151">Нигер</option><option value="152">Нигерия</option><option value="147">Нидерландские Антильские о-ва</option><option value="146">Нидерланды</option><option value="150">Никарагуа</option><option value="153">Ниуэ</option><option value="149">Новая Зеландия</option><option value="148">Новая Каледония</option><option value="154">Норвегия</option><option value="210">ОАЭ</option><option value="155">Оман</option><option value="50">Острова Кука</option><option value="156">Пакистан</option><option value="157">Палау</option><option value="158">Панама</option><option value="159">Папуа Новая Гвинея</option><option value="160">Парагвай</option><option value="161">Перу</option><option value="163">Польша</option><option value="164">Португалия</option><option value="165">Пуэрто-Рико</option><option value="168" selected="">Россия</option><option value="169">Руанда</option><option value="167">Румыния</option><option value="63">Сальвадор</option><option value="175">Сан-Марино</option><option value="176">Саудовская Аравия</option><option value="191">Свазиленд</option><option value="190">Свальбард</option><option value="170">Святая Елена, остров</option><option value="178">Сейшеллские острова</option><option value="174">Сен-Винсент и Гренадины</option><option value="173">Сен-Пьер и Микелон</option><option value="177">Сенегал</option><option value="171">Сент-Китс и Невис</option><option value="172">Сент-Люсия</option><option value="222">Сербия</option><option value="180">Сингапур</option><option value="194">Сирия</option><option value="181">Словакия</option><option value="182">Словения</option><option value="183">Соломоновы острова</option><option value="184">Сомали</option><option value="189">Суринам</option><option value="1">США</option><option value="179">Сьерра-Леоне</option><option value="197">Таджикистан</option><option value="199">Таиланд</option><option value="195">Таити</option><option value="196">Тайвань</option><option value="198">Танзания</option><option value="206">Теркс и Кайкос</option><option value="200">Того</option><option value="201">Тонга</option><option value="202">Тринидад-и-Тобаго</option><option value="207">Тувалу</option><option value="203">Тунис</option><option value="205">Туркменистан</option><option value="204">Турция</option><option value="208">Уганда</option><option value="212">Узбекистан</option><option value="209">Украина</option><option value="211">Уругвай</option><option value="69">Фиджи</option><option value="162">Филиппины</option><option value="70">Финляндия</option><option value="68">Фолклендские острова</option><option value="71">Франция</option><option value="72">Французская Гвиана</option><option value="73">Французская Полинезия</option><option value="53">Хорватия</option><option value="42">Центрально-Африканская республика</option><option value="43">Чад</option><option value="140">Черногория</option><option value="56">Чехия</option><option value="44">Чили</option><option value="193">Швейцария</option><option value="192">Швеция</option><option value="187">Шри-Ланка</option><option value="61">Эквадор</option><option value="64">Экваториальная гвинея</option><option value="218">Эллис и Футуна</option><option value="65">Эритрея</option><option value="66">Эстония</option><option value="67">Эфиопия</option><option value="185">ЮАР</option><option value="111">Южная Корея</option><option value="102">Ямайка</option><option value="103">Ян-Майен, остров</option><option value="104">Япония</option></select>		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Область/район</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="stateShipping" value="Ленинградская область, Всеволожский район" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Почтовый код</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="zipShipping" value="000000" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    <tr>
+                        <td align="left">Телефон</td>
+                        <td></td>
+                        <td>
+                            <input type="TEXT" name="phoneShipping" value="800000000" size="30">		</td>
+                    </tr>
+
+                    <tr><td height="10" colspan="3"></td></tr>
+                    <tr><td colspan="3"><hr></td></tr>
+                    <tr><td height="1" colspan="3"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="CHECKBOX" name="openForUserUp" value="1" checked=""><input type="HIDDEN" name="HIDDEN_openForUserUp" value="IsSend">Получать сообщения от регистратора			</td>
+                    </tr>
+
+                    <tr><td height="10" colspan="3"></td></tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="CHECKBOX" name="openForUserDown" value="1" checked=""><input type="HIDDEN" name="HIDDEN_openForUserDown" value="IsSend">Получать сообщения от реферала			</td>
+                    </tr>
+
+                    <tr><td height="10" colspan="3"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="CHECKBOX" name="sendEmails" value="1" checked=""><input type="HIDDEN" name="HIDDEN_sendEmails" value="IsSend">Подписаться на рассылку новостей		</td>
+                    </tr>
+
+                    <tr><td height="10" colspan="3"></td></tr>
+                    <tr><td colspan="3"><hr></td></tr>
+                    <tr><td height="1" colspan="3"></td></tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="CHECKBOX" name="delete" value="1"><input type="HIDDEN" name="HIDDEN_delete" value="IsSend"><span class="text19">Удалить аккаунт</span>		</td>
+                    </tr>
+
+                    <tr><td height="1" colspan="3"></td></tr>
+                    <tr><td colspan="3"><hr></td></tr>
+                    <tr><td height="1" colspan="3"></td></tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="hidden" name="FormWasSend" value="1">
+                            <input type="submit" name="buttonSubmit" value="Изменить">
+                        </td>
+                    </tr>
+
+                    <tr><td height="15" colspan="3"></td></tr>
+
+                    </tbody></table>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="row footer">
+        <div class="col-xs-6 col-sm-2 col-lg-2">
+            <ul>
+                <li><a href="#">Продукция</a></li>
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Бизнес</a></li>
+                <li><a href="#">Мероприятия</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-6 col-sm-2 col-lg-2">
+            <ul>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Материалы</a></li>
+                <li><a href="#">Магазин</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-lg-8 socials">
+            <ul class="list-inline footer-content social-images">
+                <li><a href="#"><img src="images/socials/instagram.png"/></a></li>
+                <li><a href="#"><img src="images/socials/youtube.png"/></a></li>
+                <li><a href="#"><img src="images/socials/vk.png"/></a></li>
+                <li><a href="#"><img src="images/socials/ok.png"/></a></li>
+                <li><a href="#"><img src="images/socials/facebook.png"/></a></li>
+                <li><a href="#"><img src="images/socials/twitter.png"/></a></li>
+            </ul>
+
+            <div class="text-right additional-terms">
+                <a href="confidentiality.php">Политика конфиденциальности</a> | <a href="terms.php">Условия пользования</a>
+                <br><br>
+                <img src="images/lg-visa.png">&nbsp;&nbsp;<img src="images/lg-visa2.png">&nbsp;&nbsp;<img src="images/lg-master_card.png">&nbsp;&nbsp;<img src="images/lg-maestro.png">
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

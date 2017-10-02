@@ -116,6 +116,14 @@ $(window).load(function() {
         ]
     });
 
+    carouselMain.init("review-carousel", {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true
+    });
+
     newsBlock.cutLongText();
 
     dropDowns.setUpDropDown($(".languages"), $(".language-selector"));
@@ -123,6 +131,10 @@ $(window).load(function() {
 
     dropDowns.setUpDropDown($(".login-dropdown"), $(".signin-dropdown"));
     dropDowns.setUpAdditionalListener($(".login-dropdown"));
+
+    // $('.dropdown').click(function() {
+    //     $('.dropdown-menu').slideToggle("fast");
+    // })
 });
 
 $(window).load(function () {
