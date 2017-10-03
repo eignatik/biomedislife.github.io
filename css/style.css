@@ -1441,11 +1441,43 @@ div.info > .price, div.count-wrap  {
     font-family: FuturaLight;
 }
 
+/* Contacts */
+.contacts-info > caption {
+    font-size: 18pt;
+    font-weight: bolder;
+}
+
+.first-contacts > tr > td {
+    vertical-align: top;
+    padding-top: 15px;
+}
+
+.first-contacts > tr > td:first-child {
+    min-width: 100px;
+}
+
+.email-form {
+    max-width: 800px;
+}
+
+.email-form > div > textarea {
+    max-width: 800px;
+}
+
+.email-form > div.form-group.simple-fields {
+    max-width: 400px;
+}
+
+
 .clrbth {
     clear: both;
 }
 
-.button-with-margin {
+.button-with-margin, .block-with-margins {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.required-symbol {
+    color: #a12828;
 }
