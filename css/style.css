@@ -1469,6 +1469,17 @@ div.info > .price, div.count-wrap  {
 }
 
 
+/* Withdraw */
+
+.withdraw-1 > tr > td:first-child, .withdraw-2 > tr > td:first-child {
+    font-weight: bolder;
+}
+
+.withdraw-2 {
+    border-bottom: 1px solid #5d5d5d;
+}
+
+
 .clrbth {
     clear: both;
 }
