@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Biomedis</title>
+
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div class="container-fluid main-wrapper">
+    <!-- HEADER -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 logo">
+            <a href="index.html"><img src="images/logo.png"/></a>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+            <ul class="list-inline top-menu">
+                <li class="signin-dropdown"><p>Вход</p></li>
+                <li class="language-selector"><p>RU</p></li>
+                <li class="search-block">
+                    <form class="form-inline">
+                        <input placeholder="Поиск"/>
+                        <button>
+                            <img src="images/search.png"/>
+                        </button>
+                    </form>
+                </li>
+                <li class="basket">
+                    <p>
+                        <img src="images/basket.png"/>
+                        <a href="#" class="gray-color">Корзина</a> &nbsp; <span style="font-size:10pt;">0.0 ₽</span>
+                    </p>
+                </li>
+            </ul>
+            <div class="languages">
+                <ul>
+                    <li><a href="#">RU</a></li>
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">DE</a></li>
+                    <li><a href="#">GR</a></li>
+                </ul>
+            </div>
+
+            <div class="login-dropdown">
+                <ul>
+                    <li><a href="login.html">Вход</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="forgotpass.html">Восстановление пароля</a></li>
+                    <li><a href="partner.html">Партнеркая программа</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="socials header-socials">
+            <ul class="list-inline header social-images">
+                <li><a href="#"><img src="images/socials/instagram.png"/></a></li>
+                <li><a href="#"><img src="images/socials/youtube.png"/></a></li>
+                <li><a href="#"><img src="images/socials/vk.png"/></a></li>
+                <li><a href="#"><img src="images/socials/ok.png"/></a></li>
+                <li><a href="#"><img src="images/socials/facebook.png"/></a></li>
+                <li><a href="#"><img src="images/socials/twitter.png"/></a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="row">
+        <div class="col-lg-12 menu-biomedis">
+            <nav class="navbar navbar-default navbar-biomedis">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbar-main">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-main">
+                        <ul class="nav navbar-nav">
+                            <li><a href="production.html">Продукция</a></li>
+                            <li><a href="company.html">Компания</a></li>
+                            <li><a href="buisnes.html">Бизнес</a></li>
+                            <li><a href="events.html">Мероприятия</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Материалы <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="documents.html">Документы</a></li>
+                                    <li><a href="teaching.html">Обучение</a></li>
+                                    <li><a href="technologies.html">Технологии</a></li>
+                                    <li><a href="congress2017.html">Конгресс 2017</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop.html">Магазин</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="partner-item">
+                                <a href="#" class="partners-toggle">
+                                        <span class="hidden-xs partners">
+                                            <img src="images/partners.png"/>
+                                        </span>
+                                    <span class="hidden-sm hidden-md hidden-lg">
+                                            Партнерам
+                                        </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="partner-block">
+                    <span class="close-partner-block hidden-lg hidden-sm hidden-md">
+                        X
+                    </span>
+                <div>
+                    <ul class="list-inline">
+                        <li><img src="images/user.png"/> </li>
+                        <li><a href="login.html">Войти в аккаунт</a> &nbsp; | </li>
+                        <li><a href="registration.html">Регистрация</a> &nbsp; | </li>
+                        <li><a href="forgotpass.html">Восстановление пароля</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="list-inline breadcrumb">
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="partner.html">Регистрация</a></li>
+                <li><a href=" partnersprogram.html">Партнерская программа</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-offset-1 col-sm-10">
+            <h1>Партнёрская программа</h1>
+
+            <div width="100%" align="middle"><h2>Общие положения</h2></div>
+            <strong>Партнерская программа</strong> (ПП) - положение, на основании которого производится расчет скидок и вознаграждений партнеров и присвоение квалификации.
+
+            <div width="100%" align="middle"><h2>Структура партнерской программы</h2></div>
+            <p>Партнерская программа представляет собой ступенчатый план скидок и вознаграждений с системой дополнительных бонусов.<br>
+                Структуру плана можно изобразить в виде лестницы, ступени которой - квалификационные уровни партнера. Чем выше квалификационный уровень, тем выше уровень скидки.</p>
+
+            <p></p><div width="100%" align="middle"><a href="images/partners_program_large.png" target="_blank"><img src="images/partners_program.png" border="0"></a></div><p></p>
+
+            <strong>ПП имеет пять уровней:</strong>
+            <ul>
+                <li>Партнер - первые шаги в бизнесе. Период активного обучения, изучение продукта, приобретение знаний и навыков ведения бизнеса, посещение обучающих еженедельных мероприятий.</li>
+                <li>Эксперт - период становления бизнеса. Приобретение умения выявлять и "выращивать" лидеров, навыков по организации структурных мероприятий.</li>
+                <li>Профи - приобретенный опыт трансформируется в профессиональные умения и навыки. Создание "личного брэнда".</li>
+                <li>Мастер - период совершенствования мастерства. Знания и навыки переходят в качества. Оттачивание до совершенства навыков построения и управления структурами. Продвижение "личного брэнда".</li>
+                <li>Советник президента - период получения остаточного дохода за создание самовоспроизводящихся и саморегулируемых бизнес-структур. Участие в управлении компанией.</li>
+            </ul>
+
+            <div width="100%" align="middle"><h2>Определения</h2></div>
+            <p><strong>Квалификация</strong> - результат карьеры партнера и показатель его положения в многоуровневой партнерской программе. В компании приняты следующие квалификации: Партнер, Эксперт, Профи, Мастер, Советник Президента.</p>
+
+            <p><strong>Партнер</strong> - физическое или юридическое лицо, зарегистрированное на сайте Компании и самостоятельно осуществляющее свою предпринимательскую деятельность независимо от Компании.</p>
+
+            <p><strong>Информационный спонсор (лично пригласивший)</strong> - партнер, лично пригласивший нового партнера в свою структуру. Информационный спонсор может не совпадать с выше стоящим партнером.</p>
+
+            <p><strong>Структура</strong> - совокупность нижестоящих партнеров всех поколений.</p>
+
+            <p><strong>Потребитель (клиент)</strong> - юридическое или физическое лицо, приобретающее продукцию у компании для собственных нужд, не связанных с извлечением прибыли. Партнер может выступать как потребитель продукции.</p>
+
+            <p><strong>Личный объем (ЛО)</strong> - сумма личных продаж за период. Измеряется в баллах.</p>
+
+            <p><strong>Групповой объем (ГО)</strong> - сумма продаж партнера и всех партнеров его структуры за период. Измеряется в баллах.</p>
+
+            <p><strong>Накопительный групповой объем (НГО)</strong> - общая накопленная сумма продаж партнера и всех партнеров его структуры. Измеряется в баллах.</p>
+
+            <p><strong>Партнерская скидка (ПС)</strong> - фиксированная скидка, используемая для расчета партнерской цены. Соответствует квалификационному рангу. Партнерскую скидку получает партнер, осуществивший покупку. Скидка применяется к баллам.</p>
+
+            <p><strong>Партнерское вознаграждение (ПВ)</strong> - аккумулируемый доход в баллах с продажи, который распространяется на вышестоящих партнеров по вертикали (цепочка лично приглашенных) и рассчитывается на основе их партнерских скидок от балловой стоимости продуктов. Не распространяется на партнера, осуществившего покупку.</p>
+
+            <p><strong>Партнерский бонус (ПБ)</strong> - доход в виде доли процента от продажи партнера вашей структуры равной или более высокой квалификации.</p>
+
+            <p><strong>Вознаграждение за рекомендацию (ВЗР)</strong> - фиксированный доход от личных заказов лично приглашенного партнера или клиента. Каждому продукту соответствует свой размер ВЗР.</p>
+
+            <p><strong>Дополнительные бонусы (ДБ)</strong> - это дополнительный доход партнера, начисляемый за выполнение определенных условий. Программа ДБ публикуется на сайте компании.</p>
+
+            <p><strong>Личная годовая активность (ЛГА)</strong> - ежегодное увеличение личного объема на определенную сумму.</p>
+
+            <p><strong>Личный идентификационный номер (ID)</strong> -специальный код, присваиваемый каждому партнеру.</p>
+
+            <p><strong>Лидер</strong> - наиболее успешно действующий партнер, развивающий свою структуру по товарообороту, ширине и глубине.</p>
+
+            <div width="100%" align="middle"><h2>Условия участия в партнерской программе</h2></div>
+            Статус партнера можно получить, зарегистрировавшись на сайте компании и сделав покупку. Статус партнера дает право приобретать продукцию согласно квалификационному уровню.
+            Для начисления и выплаты в полном объеме партнерского вознаграждения и бонусов необходимо заключить с компанией договор на оказание услуг от имени индивидуального предпринимателя или юридического лица.<br>
+            Для подтверждения участия в партнерской программе в части получения бонусов и вознаграждений личный объем партнера за год должен составлять не менее 115 баллов.
+
+            <div width="100%" align="middle"><h2>Скидки и вознаграждения</h2></div>
+            <strong>В рамках ПП партнер может получать несколько видов доходов:</strong>
+            <ul>
+                <li>
+                    Партнерская скидка - скидка при личных покупках.
+                    <br><br>
+                    <div width="100%" align="middle"><img src="images/pp_1.png" align="middle" border="0" vspace="10" hspace="20"></div>
+                    <br><br>
+                </li>
+
+                <li>
+                    Партнерское вознаграждение - доход в виде процента от продажи партнеров вашей структуры лично приглашенных, рассчитываемый на основе разницы между вашей скидкой и скидкой лично приглашенного партнера и доход в виде процента от продажи клиенту с сайта компании по вашей рекомендации или ссылке интернет, рассчитываемый на основе вашей партнерской скидки.
+                    <br><br>
+                    <div width="100%" align="middle"><img src="images/pp_2.png" align="middle" border="0" vspace="10" hspace="20"></div>
+                    <br><br>
+                </li>
+
+                <li>
+                    Вознаграждение за рекомендацию - фиксированный доход от личных заказов лично приглашенного партнера или клиента. Каждому продукту соответствует свой размер ВЗР.
+                    <br><br>
+                    <div width="100%" align="middle"><img src="images/pp_3.png" align="middle" border="0" vspace="10" hspace="20"></div>
+                    <br><br>
+                </li>
+
+                <li>
+                    Партнерский бонус - доход в виде доли процента от продажи партнера вашей структуры равной квалификации. Для всех квалификаций действует общее правило: партнеру с партнера равной или более высокой квалификации партнерское вознаграждение не начисляется. В этом случае начисляется партнерский бонус - это доход в виде процента от продажи партнера вашей структуры, который распределяется между вышестоящими партнерами этого партнера, не получившими партнерское вознаграждение.
+                    <br><br>
+                    <div width="100%" align="middle"><img src="images/pp_4.png" align="middle" border="0" vspace="10" hspace="20"></div>
+                    <br><br>
+                </li>
+
+                <li>
+                    Дополнительные бонусы.
+                </li>
+            </ul>
+
+            <div width="100%" align="middle"><h2>Подарки</h2></div>
+            При достижении определенных квалификаций и выполнении заданных условий партнер получает ценные подарки, как свидетельство своих достижений и заслуг.
+
+            <ul>
+                <li><a href="images/partners_program_large.png" target="_blank">Структура партнерской программы</a></li>
+                <li><a href="pp_balovaya_stoimocti.html" target="_blank">Балловая стоимость</a></li>
+                <li><a href="pp_voznagrajdenie_za_rekomendatiu.html" target="_blank">Вознаграждение за рекомендацию</a></li>
+                <li><a href="pp_primery.html" target="_blank">Примеры</a></li>
+            </ul>
+            </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="row footer">
+        <div class="col-xs-6 col-sm-2 col-lg-2">
+            <ul>
+                <li><a href="#">Продукция</a></li>
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Бизнес</a></li>
+                <li><a href="#">Мероприятия</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-6 col-sm-2 col-lg-2">
+            <ul>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Материалы</a></li>
+                <li><a href="#">Магазин</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-lg-8 socials">
+            <ul class="list-inline footer-content social-images">
+                <li><a href="#"><img src="images/socials/instagram.png"/></a></li>
+                <li><a href="#"><img src="images/socials/youtube.png"/></a></li>
+                <li><a href="#"><img src="images/socials/vk.png"/></a></li>
+                <li><a href="#"><img src="images/socials/ok.png"/></a></li>
+                <li><a href="#"><img src="images/socials/facebook.png"/></a></li>
+                <li><a href="#"><img src="images/socials/twitter.png"/></a></li>
+            </ul>
+
+            <div class="text-right additional-terms">
+                <a href="confidentiality.php">Политика конфиденциальности</a> | <a href="terms.php">Условия пользования</a>
+                <br><br>
+                <img src="images/lg-visa.png">&nbsp;&nbsp;<img src="images/lg-visa2.png">&nbsp;&nbsp;<img src="images/lg-master_card.png">&nbsp;&nbsp;<img src="images/lg-maestro.png">
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

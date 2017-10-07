@@ -147,73 +147,38 @@
             <ul class="list-inline breadcrumb">
                 <li><a href="index.html">На главную</a></li>
                 <li><a href="partner.html">Мой аккаунт</a></li>
-                <li><a href="moneyhistory.html">Операции по счету</a></li>
+                <li><a href="profile_statistic.html">Пользовательская статистика</a></li>
             </ul>
         </div>
-        <div class="col-sm-offset-1 col-sm-10">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody><tr><td height="5"></td></tr>
-                    <tr>
-                        <td>
-                            <h1>История операций по счёту. Российские рубли</h1>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form name="formFilter" enctype="multipart/form-data" method="post" action="moneyhistory.php">
-                                <table width="100%" class="table-responsive" cellspacing="0" cellpadding="0" border="0" align="left" bgcolor="#CCCCCC">
-                                    <tbody  style="background: #d8d8d8;">
-                                    <tr>
-                                        <td height="1" colspan="3" bgcolor="#A0A0A0"></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="10" colspan="3"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20"></td>
-                                        <td colspan="2">Выберите валюту:<br><br>
-                                            <select  class="form-control" style="max-width: 300px;" name="filterCurrencyId" onchange="javascript:filterCurrencyIdOnChange();">
-                                                <option value="1" selected="">Российские рубли</option>
-                                                <option value="2">Доллары США</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="hidden" name="numberPage" value="0">
-                                            <input type="hidden" name="submitFormFilter" value="1">
-                                        </td>
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="10" colspan="3"></td>
-                                    </tr>
-                                    <tr>
-                                        <td height="1" colspan="3" bgcolor="#A0A0A0"></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="30"></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <!-- Message can be alert-info, alert-warning, alert-danger, alert-success -->
-                            <p class="alert alert-warning">По данной валюте, на вашем счету, не было проведено ни одной операции!</p>
-                        </td>
-                    </tr>
-                    <tr><td height="5"></td></tr>
+        <div class="col-sm-offset-1 col-sm-10" style="overflow: scroll;">
+                <h1>Пользовательская статистика</h1>
+
+                <table class="table-responsive" border="0" cellspacing="0" cellpadding="0">
+                    <tbody align="left" valign="top">
+                    <tr><td colspan="15"><hr></td></tr>
 
                     <tr>
-                        <td>
-                        </td>
+                        <td width="100" valign="top"><strong>Период</strong></td>
+                        <td width="5"></td>
+                        <td width="80" valign="top"><strong>ГО (баллы)</strong></td>
+                        <td width="5"></td>
+                        <td width="80" valign="top"><strong>ЛО (баллы)</strong></td>
+                        <td width="5"></td>
+                        <td width="80" valign="top"><strong>Мои заказы</strong></td>
+                        <td width="5"></td>
+                        <td width="80" valign="top"><strong>Скидка</strong></td>
+                        <td width="5"></td>
+                        <td width="80" valign="top"><strong>Вознаграждение<br>и бонус</strong></td>
+                        <td width="5"></td>
+                        <td width="80" valign="top"><strong>Прочие доходы</strong></td>
+                        <td width="5"></td>
+                        <td width="80" valign="top"><strong>Общий доход</strong></td>
                     </tr>
 
-                    <tr><td height="15"></td></tr>
-                    </tbody></table>
+                    <tr><td colspan="15"><hr></td></tr>
+                    <tr><td height="1" colspan="15"></td></tr>
+                    <tr><td colspan="15"><hr></td></tr><tr><td><strong>Всего:</strong></td><td></td><td><strong>-</strong></td><td></td><td><strong>-</strong></td><td></td><td><strong>-<br>-</strong></td><td></td><td><strong>-<br>-</strong></td><td></td><td><strong>-<br>-</strong></td><td></td><td><strong>-<br>-</strong></td><td></td><td><strong>-<br>-</strong></td></tr><tr><td colspan="15"><hr></td></tr><tr><td>Октябрь 2017</td><td></td><td>-</td><td></td><td>-</td><td></td><td>-<br>-</td><td></td><td>-<br>-</td><td></td><td>-<br>-</td><td></td><td>-<br>-</td><td></td><td>-<br>-</td></tr><tr><td colspan="15"><hr></td></tr></tbody>
+                </table>
         </div>
     </div>
 

@@ -1479,6 +1479,10 @@ div.info > .price, div.count-wrap  {
     border-bottom: 1px solid #5d5d5d;
 }
 
+.form-horizontal .control-label {
+    text-align: left !important;
+}
+
 
 .clrbth {
     clear: both;
