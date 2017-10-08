@@ -140,26 +140,118 @@
             </div>
         </div>
     </div>
+
     <!-- CONTENT -->
     <div class="row">
         <div class="col-lg-12">
             <ul class="list-inline breadcrumb">
                 <li><a href="index.html">На главную</a></li>
-                <li><a href="login.html">Вход</a></li>
-                <li><a href="forgotpass.html">Восстановление пароля</a></li>
+                <li><a href="cart.html">Корзина заказов</a></li>
             </ul>
         </div>
-        <div class="col-lg-12 block-with-margins">
-            <div style="max-width: 350px; margin: 0 auto;">
-                <h2>Восстановление пароля</h2>
-                <form>
-                    <div>
-                        <p>Введите E-mail, под которым регистрировались<span class="required-symbol">*</span> </p>
-                        <input class="form-control" type="email" placeholder="Введите E-Mail"/>
-                    </div>
-                    <br/>
-                    <input type="button" class="btn btn-purple" value="Отправить"/>
-                </form>
+        <div class="col-xs-12">
+            <h2 style="margin: 20px;">Корзина заказов</h2>
+            <div class="alert alert-info" style="margin: 10px;">
+                <b>Уважаемый покупатель!</b><br/><br/>
+                Мы предоставляем следующие варианты оплаты и доставки приобретённого товара:
+                <ul>
+                    <li>Оплата с помощью системы on-line платежей Robokassa;</li>
+                    <li>Оплата наличными курьеру (по Москве);</li>
+                </ul>
+            </div>
+
+            <div style="width: 100%; overflow-x: scroll;">
+                <table class="table cart-items">
+                    <tbody>
+                    <tr class="captions">
+                        <th>Наименование</th>
+                        <th>Кол-во</th>
+                        <th>Цена</th>
+                        <th>Баллы*</th>
+                        <th>Скидка</th>
+                        <th>Доставка</th>
+                        <th>Всего</th>
+                        <th>Удалить</th>
+                    </tr>
+
+                    <tr>
+                        <td>BIOMEDIS TRINITY</td>
+                        <td>
+                            <div class="form-inline">
+                                <input class="form-control input-sm" value="1" style="width: 40px;"/>
+                            </div>
+                        </td>
+                        <td>27600 RUB</td>
+                        <td><a href="partnersprogram.html">326.00</a></td>
+                        <td>6259 RUB</td>
+                        <td>-</td>
+                        <td>21341</td>
+                        <td>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BIOMEDIS TRINITY</td>
+                        <td>
+                            <div class="form-inline">
+                                <input class="form-control input-sm" value="1" style="width: 40px;"/>
+                            </div>
+                        </td>
+                        <td>27600 RUB</td>
+                        <td><a href="partnersprogram.html">326.00</a></td>
+                        <td>6259 RUB</td>
+                        <td>-</td>
+                        <td>21341</td>
+                        <td>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BIOMEDIS TRINITY</td>
+                        <td>
+                            <div class="form-inline">
+                                <input class="form-control input-sm" value="1" style="width: 40px;"/>
+                            </div>
+                        </td>
+                        <td>27600 RUB</td>
+                        <td><a href="partnersprogram.html">326.00</a></td>
+                        <td>6259 RUB</td>
+                        <td>-</td>
+                        <td>21341</td>
+                        <td>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <i>* Баллы партнерской программы</i>
+
+            <div class="divider"></div>
+
+            <div style="padding: 20px;">
+                <div>
+                    <label for="orderComment">Комментарий к заказу (необязательное поле):</label>
+                    <textarea class="form-control" rows="5" id="orderComment" placeholder="Введите комментарий к заказу, если вам необходимо что-то дополнительно к нему сообщить"></textarea>
+                </div>
+                <br/>
+                <div>
+                    <label for="promoCode">Промокод (необязатеьное поле):</label>
+                    <input class="form-control" id="promoCode"/>
+                    <i style="font-size: 10pt;">ВНИМАНИЕ! Чтобы отменить действие промо кода оставьте поле пустым.</i>
+                </div>
+                <div class="block-with-margins alert alert-success big-font-alert">
+                    Всего без доставки: 27600 RUB - 6259 RUB = <b>21341 RUB</b>
+                </div>
+                <div class="block-with-margins">
+                    <input type="button" class="btn btn-purple" value="Перейти к оплате"/>
+                </div>
             </div>
         </div>
     </div>
