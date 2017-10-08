@@ -60,7 +60,7 @@
 ```html
 <div class="carousel-main-slide-0" 
      style="
-            background-image: url('{SOME_KIND_OF_GENERATED_RESOURCE_PATH}');
+            background-image: url('{$SOME_KIND_OF_GENERATED_RESOURCE_PATH}');
             background-repeat: no-repeat; background-position: right; height: 572px;">
     <div class="carousel-container slideN">
       <!-- put slide content here -->
@@ -68,3 +68,28 @@
 </div>
 ```
 Рекомендуется использоваться бутстрап контейнер внутри слайдов.
+
+## Корзина
+Элементы корзины добавляются в виде новых tr под/над существующими в верстке.
+Пример элемента: 
+```html
+<tr>
+    <td>{$title}</td>
+    <td>
+        <div class="form-inline">
+            <input class="form-control input-sm" value="1" style="width: 40px;"/>
+        </div>
+    </td>
+    <td>{$sum} {$curency}</td>
+    <td><a href="partnersprogram.html">{$points}</a></td>
+    <td>{$discount}{$curency}</td>
+    <td>{$delivery-flg}</td>
+    <td>{$amount}</td>
+    <td>
+        <a href="#">
+            <span class="glyphicon glyphicon-remove"></span>
+        </a>
+    </td>
+</tr>
+```
+P.S.: все {$var} являются выдуманными, показаны в качестве примера использования шаблонизаторов
