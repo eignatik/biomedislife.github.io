@@ -33,7 +33,12 @@
 
 Пример слайда:
 ```html
-<div class="carousel-main-slide-0" style="background-image: url('images/slider/4.jpeg'); background-repeat: no-repeat; background-position: right; height: 572px;">
+<div class="carousel-main-slide-0" 
+     style="
+            background-image: url('images/slider/4.jpeg'); 
+            background-repeat: no-repeat; 
+            background-position: right; 
+            height: 572px;">
     <div class="carousel-container slide0">
         <div class="container-fluid">
             <div class="row">
@@ -53,7 +58,10 @@
 
 Пример слайда, в который можно добавлять кастомное наполнение: 
 ```html
-<div class="carousel-main-slide-0" style="background-image: url('{SOME_KIND_OF_GENERATED_RESOURCE_PATH}'); background-repeat: no-repeat; background-position: right; height: 572px;">
+<div class="carousel-main-slide-0" 
+     style="
+            background-image: url('{SOME_KIND_OF_GENERATED_RESOURCE_PATH}');
+            background-repeat: no-repeat; background-position: right; height: 572px;">
     <div class="carousel-container slideN">
       <!-- put slide content here -->
     </div>
