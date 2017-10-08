@@ -93,3 +93,60 @@
 </tr>
 ```
 P.S.: все {$var} являются выдуманными, показаны в качестве примера использования шаблонизаторов
+
+## Новости
+Добавление записей новостей по похожим принципам. Есть список `<ul class="news"></ul>`, и в него надо добавлять новости в виде li блоков.
+Пример шаблона для новостей
+```html
+<li>
+    <h3>{$title}</h3>
+    <p>{$text}</p>
+    <div class="info">
+        <span class="date">{$date}</span>
+        <a href="{$linkToEntry}" class="link">
+            Подробнее &gt;
+        </a>
+    </div>
+</li>
+```
+
+## Магазин
+
+Продукты в магазине добавляется в `<div class="... shop-content"> <div class="row"> HERE </div> </div>`
+Добавляются так же по общему шаблону, в котором надо только подставить данные
+```html
+<div class="col-xs-12 col-sm-4">
+    <div class="item">
+        <form name="formBuyUnit126" style="margin:0px;" method="post" action="shoppingcart.php">
+            <div class="img">
+                <a href="{$product_page}">
+                    <img src="{$image_path}" alt="">
+                </a>
+            </div>
+            <div class="info">
+                <h3>
+                    <a href="{$product_page}">{$product_title}</a>
+                </h3>
+                <span class="price">Цена: {$product_sum} &nbsp; {$product_curency}</span>
+                <div class="count-wrap"><span>Кол-во: </span>
+                    <div class="count">
+                        <a href="#" class="minus">-</a>
+                        <input type="text" name="addQuantity" class="num" data-count="1" value="1">
+                        <a href="#" class="plus">+</a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+
+                <div class="style-buy">
+                    <a href="#">
+                        <div>Купить</div>
+                        <div><img src="images/basket-wh.png"/></div>
+                        <div></div>
+                    </a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+```
