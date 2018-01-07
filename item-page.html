@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Главная</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="css/general-styles.css"/>
+    <link rel="stylesheet" href="css/catalog-product.css"/>
+    <link rel="stylesheet" href="css/star-rating.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript"  src="js/star-rating.min.js"></script>
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            activate('img[src*=".svg"]');
+
+            function activate(string){
+                $(string).each(function(){
+                    var $img = $(this);
+                    var imgID = $img.attr('id');
+                    var imgClass = $img.attr('class');
+                    var imgURL = $img.attr('src');
+
+                    $.get(imgURL, function(data) {
+                        // Get the SVG tag, ignore the rest
+                        var $svg = $(data).find('svg');
+
+                        // Add replaced image's ID to the new SVG
+                        if(typeof imgID !== 'undefined') {
+                            $svg = $svg.attr('id', imgID);
+                        }
+                        // Add replaced image's classes to the new SVG
+                        if(typeof imgClass !== 'undefined') {
+                            $svg = $svg.attr('class', imgClass+' replaced-svg');
+                        }
+
+                        // Remove any invalid XML tags as per http://validator.w3.org
+                        $svg = $svg.removeAttr('xmlns:a');
+
+                        // Replace image with new SVG
+                        $img.replaceWith($svg);
+
+                    }, 'xml');
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <div class="shadow"></div>
+
+    <div class="mobile-menu hidden-md hidden-lg">
+        <div class="row search-block">
+            <div class="col-xs-12">
+                <input class="search-input" placeholder="Поиск"/>
+                <img src="images/icons/search.svg"/>
+            </div>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li><a href="#"><img src="images/icons/discount.svg"/> Акции</a></li>
+            <li><a href="#"><img src="images/icons/tree.svg"/> К Новому году</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Продукты питания <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu mobile-catalog">
+                    <li>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Фермерские продукты</a></li>
+                            <li><a href="#">Вегетерианские продукты</a></li>
+                            <li><a href="#">Диетические продукты</a></li>
+                            <li><a href="#">Детское питание</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="list-unstyled">
+                            <li><a href="catalog_4.html">Все продукты</a></li>
+                            <li><a href="catalog_4.html">Мясные продукты</a></li>
+                            <li><a href="catalog_4.html">Молочные продукты</a></li>
+                            <li><a href="catalog_4.html">Напитки</a></li>
+                            <li><a href="catalog_4.html">Овощи, фрукты, ягоды</a></li>
+                            <li><a href="catalog_4.html">Чай, кофе, какао</a></li>
+                            <li><a href="catalog_4.html">Бакалея</a></li>
+                            <li><a href="catalog_4.html">Кондитерские изделия и снэки</a></li>
+                            <li><a href="catalog_4.html">Замороженные продукты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Промтовары</a></li>
+            <li><a href="#">Детские товары</a></li>
+            <li><a href="#">Зоотовары</a></li>
+        </ul>
+
+        <div class="top-dark-mobile-menu">
+            <ul class="list-unstyled smoroza-info">
+                <li>
+                    <img src="images/icons/dial.svg"/>
+                    + 7 812 313-33-50
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle dropdown-cities" data-toggle="dropdown"><img src="images/icons/pin.svg"/>
+                        Санкт-Петербург <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Санкт-Петербург</a></li>
+                        <li><a href="#">Ленинградская область</a></li>
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Великий Новгород</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="images/icons/time.svg"/>
+                    Ежедневно: 9:00 - 21:00
+                </li>
+            </ul>
+
+            <hr/>
+
+            <ul class="list-unstyled service-menu">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Как вернуть?</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Смороза Бизнес</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-fluid main-wrapper">
+        <section class="navigation hidden-xs hidden-sm">
+            <!--Top part of menu-->
+            <div class="row top-dark-menu">
+                <div>
+                    <div class="col-sm-4">
+                        <ul class="list-inline service-menu">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Смороза Бизнес</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-8 text-right">
+                         <ul class="list-inline smoroza-info">
+                            <li>
+                                <img src="images/icons/dial.svg"/>
+                                + 7 812 313-33-50
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown-cities" data-toggle="dropdown"><img src="images/icons/pin.svg"/>
+                                Санкт-Петербург <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Санкт-Петербург</a></li>
+                                    <li><a href="#">Ленинградская область</a></li>
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Великий Новгород</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/icons/time.svg"/>
+                                Ежеднвено: 9:00 - 21:00
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Войти
+                                    <img src="images/icons/login.svg"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+
+            <!--Scrolled part of menu-->
+            <nav class="navbar navbar-default scrolled-menu">
+                <div class="container-fluid">
+                    <div>
+                        <div class="row">
+                            <div class="logo-block text-left">
+                                <a href="#">
+                                    <div class="logo"></div>
+                                </a>
+                            </div>
+                            <div class="col-sm-12 text-right">
+                                <div class="search-view">
+                                    <input class="search-big" placeholder="Поиск"/>
+                                    <img src="images/icons/search.svg"/>
+                                </div>
+                                <ul class="nav navbar-nav menu-view">
+                                    <li><a href="#"><img src="images/icons/discount.svg"/> Акции</a></li>
+                                    <li><a href="#"><img src="images/icons/tree.svg"/> К Новому году</a></li>
+                                    <li class="product-catalog">
+                                        <a href="#">Продукты</a>
+                                        <img src="images/theme/corner.png"/>
+                                    </li>
+                                    <li><a href="#">Промтовары</a></li>
+                                    <li><a href="#">Детям</a></li>
+                                    <li><a href="#">Зоотовары</a></li>
+                                    <li class="search-item">
+                                        <input class="search-small" placeholder="Поиск"/>
+                                        <img src="images/icons/search.png"/>
+                                        <div class="search-suggestions">
+                                            <ul>
+                                                <li>dsf</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="cart-item">
+                                        <a href="#"><img src="images/icons/cart.svg"/>
+                                            <span class="cart-counter">
+                                                0
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-floating">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="catalog-sections col-sm-5 col-md-4">
+                                <div>
+                                    <ul>
+                                        <li><a href="catalog_3.html">Фермерские продукты</a></li>
+                                        <li><a href="catalog_3.html">Вегетерианцам и веганам</a></li>
+                                        <li><a href="catalog_3.html">Диетические продукты</a></li>
+                                        <li><a href="catalog_3.html">Быстрого приготовления</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section-categories col-sm-7 col-md-5">
+                                <div>
+                                    <ul>
+                                        <li><a href="catalog_4.html">Все продукты</a></li>
+                                        <li><a href="catalog_4.html">Мясные продукты</a></li>
+                                        <li><a href="catalog_4.html">Молочные продукты</a></li>
+                                        <li><a href="catalog_4.html">Напитки</a></li>
+                                        <li><a href="catalog_4.html">Овощи, фрукты, ягоды</a></li>
+                                        <li><a href="catalog_4.html">Чай, кофе, какао</a></li>
+                                        <li><a href="catalog_4.html">Бакалея</a></li>
+                                        <li><a href="catalog_4.html">Кондитерские изделия и снэки</a></li>
+                                        <li><a href="catalog_4.html">Замороженные продукты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="special-offer hidden-sm col-md-3">
+                                <div style="background-image: url('images/placeholders/milk@3x.jpg');">
+                                    <div>
+                                        <h5 style="color: #fff; text-align: center;">Новое поступление!</h5>
+                                    </div>
+                                    <div>
+                                        <p style="color: #fff;">
+                                            Большой выбор продукции «Простоквашино» теперь в Смороза.ру
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-floating">
+                    <div class="container-fluid">
+                        <div class="row cart-floating-inner">
+                            <div class="col-md-8">
+                                <h2>Корзина</h2>
+                                <span>Очистить список</span>
+                                <div>
+                                    <table class="table table-responsive">
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="remove-cart-item glyphicon glyphicon-remove"></span></td>
+                                            <td>
+                                                <img src="images/placeholders/carrot.png"/>
+                                            </td>
+                                            <td>
+                                                <span>Артикул: <span class="articul">184359</span></span>
+                                                <p>Замороженный йогурт соленая карамель  и эспрессо, Hood Frozen Yogurt</p>
+                                                <span>1.42 л</span>
+                                            </td>
+                                            <td width="100">
+                                                <section class="cart-count-section">
+                                                    <button class="minus">-</button>
+                                                    <input class="count" disabled value="1"/>
+                                                    <button class="plus">+</button>
+
+                                                </section>
+                                            </td>
+                                            <td>
+                                                <span>350,00 руб/шт.</span>
+                                                <p>700,00 <span>руб.</span></p>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pull-right">
+                                    <form class="form-horizontal order-form">
+                                        <div class="form-group">
+                                            <div class="col-xs-1">
+                                                O
+                                            </div>
+                                            <div class="col-xs-10">
+                                                До бесплатной доставки купите еще на
+                                                <span class="order-big-font">
+                                                    300
+                                                    <span>руб.</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="col-xs-6 separate">
+                                                Сумма покупок
+                                            </span>
+                                            <div class="col-xs-6 text-right separate">
+                                                <span class="order-big-font">
+                                                    700,00
+                                                    <span>руб.</span>
+                                                </span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <span class="col-xs-6">
+                                                Доставка
+                                            </span>
+                                            <div class="col-xs-6 text-right">
+                                                <span class="order-big-font">
+                                                    Бесплатно
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="col-xs-4 promocode-label">
+                                                Промокод
+                                            </span>
+                                            <div class="col-xs-8 text-right">
+                                                <div class="promo-widget">
+                                                    <input placeholder="XXX-XX-XXX"/>
+                                                    <button>+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group separated">
+                                            <div class="col-xs-8 separate">
+                                                Скидка по промокоду
+                                            </div>
+                                            <div class="col-xs-4 separate">
+                                                <span class="total-discount order-big-font">
+                                                    15%
+                                                </span>
+                                            </div>
+                                            <div class="col-xs-3 order-extra-big-font separate">
+                                                Итого
+                                            </div>
+                                            <div class="col-xs-9 text-right order-extra-big-font separate">
+                                                <span class="total-sum">
+                                                    28 655,00 <span> руб. </span>
+                                                </span>
+                                            </div>
+                                            <div class="col-xs-12 order-button">
+                                                <button type="submit" class="btn-base btn-green-colored btn-lg">Оформить покупки</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <section class="navigation-mobile hidden-md hidden-lg">
+            <!--Scrolled part of menu-->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav mobile-navbar">
+                        <li class="pull-left">
+                            <a href="#">
+                                <img src="images/logo-small.png" class="logo-mobile"/>
+                            </a>
+                        </li>
+                        <li class="pull-right sandwitch">
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </li>
+                        <li class="pull-right">
+                            <a href="#"><img src="images/icons/login.svg"/>
+                            </a>
+                        </li>
+                        <li class="pull-right">
+                            <a href="#"><img src="images/icons/cart.svg"/>
+                                <span class="cart-counter">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+
+        <section class="content">
+            <div class="row section-header section-bakaley">
+                <div>
+                    <div class="col-xs-6 col-sm-6 col-md-5">
+                        <h1>Бакалея
+                            <span>
+                                /
+                            </span>
+                            <span>
+                                Завтраки
+                            </span>
+                            <span>
+                                /
+                            </span>
+                            <span>
+                                Хлопья
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="col-xs-6 col-sm-push-1 col-sm-3 col-md-push-3 col-md-3 col-lg-push-3 col-lg-3">
+                        <img src="images/theme/sections/sections-bakalley.png"/>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="row section-content">
+                <div class="col-lg-push-1 col-lg-4 product-item-slider">
+                    <div class="slider-for">
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                    </div>
+                    <div class="items-right-arrow">
+                        <img src="images/theme/arrow-right.svg"/>
+                    </div>
+                    <div class="items-left-arrow">
+                        <img src="images/theme/arrow.svg"/>
+                    </div>
+
+                    <div class="slider-nav">
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                        <div>
+                            <img src="images/placeholders/flakes.png"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-push-2 col-lg-5">
+                    <div class="product item-title">
+                        <h3 class="text-center" style="margin: 0 auto; padding-top: 0; max-width: 500px;">Хлопья кукурузные с медом и арахисом, Nestle Gold Flakes</h3>
+                        <h1 class="text-center" style="margin-top: 16px; font-weight: 700; "><span style="font-size: 16px;" class="old-price old-price-grey">650,00 руб</span> 155,00 руб./шт</h1>
+                        <h5 class="text-center price-per-unit">
+                            516 руб./кг
+                        </h5>
+                        <h5 class="text-center discount-unit"><img src="images/theme/item-discount.png" width="29"> Скидка <span>25%</span></h5>
+                    </div>
+
+                    <div class="product item-properties">
+                        <div class="tags"><img src="images/theme/leafs-icon.png" width="23"/> <a href="#">Вегетерианцам</a> <a href="#">Без глютена</a> <a href="#">Для диабетиков</a></div>
+                        <div class="properties">
+                            <ul class="list-unstyled">
+                                <li><b>Кол-во:</b> 300 г</li>
+                                <li><b>Упаковка:</b> картон</li>
+                                <li><b>Тип продукта:</b> сухие завтраки</li>
+                                <li><b>Производитель:</b> <a href="#">Nestle</a></li>
+                                <li><b>Страна производства:</b> Россия</li>
+                            </ul>
+                        </div>
+                        <div class="cart-options">
+                            <section style="width: 157px; margin: 0 auto;" class="cart-count-section product-cart-options">
+                                <button class="minus">-</button>
+                                <input class="count" disabled value="1"/>
+                                <button class="plus">+</button>
+                            </section>
+                            <div>
+                                <button class="btn-base btn-green-colored btn-lg" style="width: 157px;">В корзину</button>
+                            </div>
+                        </div>
+                        <div class="clrBth">
+                        </div>
+                    </div>
+
+                    <div class="product item-delivery">
+                        <img src="images/theme/truck.png" width="23"/> Ближайшая доставка завтра <span class="delivery-time">до 16:00</span>
+                    </div>
+
+                    <div class="product item-icons">
+                        <div><img src="images/placeholders/rating-placeholder.png" width="90"/> <span>11 отзывов</span></div>
+                        <div>
+                            <ul class="item-options">
+                                <li><img src="images/theme/shape.svg" class="favorite-icon"/> <span>Добавить в избранное</span></li>
+                                <li><img src="images/theme/share.svg" class="share-icon"/> Поделиться</li>
+                            </ul>
+                        </div>
+                        <div class="clrBth"></div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+
+                <div class="col-lg-12 item-descriptions">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#panel1">Описание</a>
+                            <p class="tab-arrow">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </p>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#panel2">
+                                Комментарии <span class="comments-counter">(17)</span>
+                            </a>
+                            <p class="tab-arrow">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </p>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#panel3">
+                                Отзывы покупателей <span class="reports-counter">(2)</span>
+                            </a>
+                            <p class="tab-arrow">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </p>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#panel4">
+                                Рецепты <span class="recipes-counter">(4)</span>
+                            </a>
+                            <p class="tab-arrow">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="panel1" class="tab-pane fade in active">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div style="padding-right: 20px;" class="col-lg-push-1 col-lg-5">
+                                        <p style="font-weight: 500;">
+                                            Все овощи для смесей Bonduelle бланшируются по отдельности, чтобы сохранить природный цвет и текстуру каждого из них, и смешиваются только на стадии фасовки.<br/><br/>
+
+                                            Предохранять от размораживания! Размороженный продукт повторно не замораживать!
+                                        </p>
+
+                                        <div class="product-consist">
+                                            <h5>Состав:</h5>
+                                            <p>
+                                                кукуруза, сахар, арахис, глюкоза, мед, соль, экстракт ячменного солода, эмульгаторы (моно и диглицериды жирных кислот), регулятор кислотности (фосфаты натрия), антиокислитель (токоферолы), витамины. Продукт может содержать незначительное количество молока, орехов, глютена и сои.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-push-1 col-lg-5">
+                                        <div style="padding-left: 20px;">
+                                            <h5>Пищевая ценность (100 грамм)</h5>
+                                            <ul class="list-unstyled">
+                                                <li>белки – 7,1 г</li>
+                                                <li>жиры – 4,4 г</li>
+                                                <li>углеводы – 81,9 г</li>
+                                            </ul>
+                                            <br/>
+                                            <h5>Энергетическая ценность</h5>
+                                            <ul class="list-unstyled">
+                                                <li>396 ккал</li>
+                                            </ul>
+                                            <br/>
+                                            <h5>Условия хранения</h5>
+                                            <p>
+                                                Хранить при температуре не выше +20'C и относительной влажности воздуха не более 75%.<br/><br/>
+                                                Рекомендуется употреблять в течение 60 дней после вскрытия упаковки.<br/><br/>
+                                                Срок годности 1 год.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel2" class="tab-pane fade">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-push-1 col-lg-7">
+                                        <ul class="comments">
+                                            <li>
+                                                <div>
+                                                    <img src="images/theme/user-avatar-red.png"/>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <span class="username">Иванов Иван</span>
+                                                        <span class="comment-date">3 августа</span>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <span class="comment-up comment-up-green">
+                                                            <img src="images/theme/finger-up.svg"/>
+                                                            1
+                                                        </span>
+                                                        <span class="comment-down comment-down-red">
+                                                            <img src="images/theme/finger-down.svg"/>
+                                                            2
+                                                        </span>
+                                                        <img src="images/theme/reply.svg" class="comment-reply"/>
+                                                    </div>
+                                                    <div>
+                                                        <p class="comment-message">
+                                                            Быстро привезли, товар в надлежащем качестве, свежий, не помятый. отличный магазин! очень доволен сервисом. обязательно буду заказывать еще и еще. больше всего мне понравилось то, что здесь можно оставить комментарий к товару! правда, ребята, молодцы! теперь всегда могу быть точно уверенным, какие макароны кушать на ужин. Спасибо!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <img src="images/theme/user-avatar-red.png"/>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <span class="username">Иванов Иван</span>
+                                                        <span class="comment-date">3 августа</span>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <span class="comment-up">
+                                                            <img src="images/theme/finger-up.svg"/>
+                                                            0
+                                                        </span>
+                                                        <span class="comment-down comment-down-red">
+                                                            <img src="images/theme/finger-down.svg"/>
+                                                            2
+                                                        </span>
+                                                        <img src="images/theme/reply.svg" class="comment-reply"/>
+                                                    </div>
+                                                    <div>
+                                                        <p class="comment-message">
+                                                            Быстро привезли, товар в надлежащем качестве, свежий, не помятый. отличный магазин! очень доволен сервисом. обязательно буду заказывать еще и еще. больше всего мне понравилось то, что здесь можно оставить комментарий к товару! правда, ребята, молодцы! теперь всегда могу быть точно уверенным, какие макароны кушать на ужин. Спасибо!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <img src="images/theme/user-avatar-red.png"/>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <span class="username">Иванов Иван</span>
+                                                        <span class="comment-date">3 августа</span>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <span class="comment-up comment-up-green">
+                                                            <img src="images/theme/finger-up.svg"/>
+                                                            1
+                                                        </span>
+                                                        <span class="comment-down comment-down-red">
+                                                            <img src="images/theme/finger-down.svg"/>
+                                                            2
+                                                        </span>
+                                                        <img src="images/theme/reply.svg" class="comment-reply replied"/>
+                                                    </div>
+                                                    <div>
+                                                        <p class="comment-message">
+                                                            Быстро привезли, товар в надлежащем качестве, свежий, не помятый. отличный магазин! очень доволен сервисом. обязательно буду заказывать еще и еще. больше всего мне понравилось то, что здесь можно оставить комментарий к товару! правда, ребята, молодцы! теперь всегда могу быть точно уверенным, какие макароны кушать на ужин. Спасибо!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <ul class="comments replies">
+                                                    <li>
+                                                        <div>
+                                                            <img src="images/theme/user-avatar-red.png"/>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <span class="username">Иванов Иван</span>
+                                                                <span class="comment-date">3 августа</span>
+                                                            </div>
+                                                            <div class="pull-right">
+                                                            <span class="comment-up comment-up-green">
+                                                                <img src="images/theme/finger-up.svg"/>
+                                                                1
+                                                            </span>
+                                                                <span class="comment-down">
+                                                                <img src="images/theme/finger-down.svg"/>
+                                                                0
+                                                            </span>
+                                                                <img src="images/theme/reply.svg" class="comment-reply"/>
+                                                            </div>
+                                                            <div>
+                                                                <p class="comment-message">
+                                                                    Быстро привезли, товар в надлежащем качестве, свежий, не помятый. отличный магазин! очень доволен сервисом. обязательно буду заказывать еще и еще. больше всего мне понравилось то, что здесь можно оставить комментарий к товару! правда, ребята, молодцы! теперь всегда могу быть точно уверенным, какие макароны кушать на ужин. Спасибо!
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="show-all-comments">
+                                            Показать все комментарии
+                                        </div>
+
+                                        <div class="add-comment">
+                                            <h3>Присоединяйтесь к дискуссии</h3>
+                                            <form class="text-right">
+                                                <div class="col-xs-12">
+                                                    <textarea class="simple-input" placeholder="Ваш комментарий" rows="5"></textarea>
+                                                </div>
+                                                <div class="col-xs-5">
+                                                    <input class="simple-input pull-left " placeholder="Ваше имя"/>
+                                                </div>
+                                                <div class="col-xs-7">
+                                                    <button type="submit" class="btn-base btn-black btn-lg">
+                                                        Отправить
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel3" class="tab-pane fade">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-push-1 col-lg-11">
+                                        Rjvvtynjcbrb
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel4" class="tab-pane fade">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-push-1 col-lg-11">
+                                        Rjvvtynjcbrb
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 main-products similar-slider">
+                    <div>
+                        <h3>Похожие товары</h3>
+                        <div class="items-slider">
+                            <div class="main-item discount-type">
+                                <div>
+                                    <div><div>&nbsp;</div></div>
+                                    <div>
+                                        <a href="item-page.html">
+                                            <img class="item-image" src="images/placeholders/carrot.png"/>
+                                        </a>
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="old-price"><span>29,90</span></p>
+                                        <p class="actual-price">17,00 <span class="units">руб./кг</span></p>
+                                        <p class="item-description">Морковь свежая, мытая</p>
+                                        <p class="item-country">Россия</p>
+                                        <p class="item-weight">0,8 - 1,2 кг</p>
+
+                                        <!-- TODO: provide half stars? -->
+                                        <div class="item-rating">
+                                            <img src="images/placeholders/rating-placeholder.png" height="14"/>
+                                        </div>
+                                    </div>
+                                    <div class="item-interact">
+                                        <div>
+                                            <img src="images/theme/shape.svg"/>
+                                        </div>
+                                        <div>
+                                            <section class="count-section">
+                                                <button class="minus">-</button>
+                                                <input class="count" disabled value="1"/>
+                                                <button class="plus">+</button>
+
+                                            </section>
+                                            <button type="submit" class="btn-base btn-green">
+                                                <span class="hidden-xs hidden-sm">В корзину</span>
+                                                <span class="hidden-md hidden-lg">+</span>
+                                            </button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-item new-type">
+                                <div>
+                                    <div><div>&nbsp;</div></div>
+                                    <div>
+                                        <img class="item-image" src="images/placeholders/eggs.png"/>
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="old-price"></p>
+                                        <p class="actual-price">17,00 <span class="units">руб./кг</span></p>
+                                        <p class="item-description">Морковь свежая, мытая</p>
+                                        <p class="item-country">Россия</p>
+                                        <p class="item-weight">0,8 - 1,2 кг</p>
+
+                                        <div class="item-rating">
+                                            <img src="images/placeholders/rating-placeholder.png" height="14"/>
+                                        </div>
+                                    </div>
+                                    <div class="item-interact">
+                                        <div>
+                                            <img src="images/theme/shape.svg"/>
+                                        </div>
+                                        <div>
+                                            <section class="count-section">
+                                                <button class="minus">-</button>
+                                                <input class="count" disabled value="1"/>
+                                                <button class="plus">+</button>
+
+                                            </section>
+                                            <button type="submit" class="btn-base btn-green">
+                                                <span class="hidden-xs hidden-sm">В корзину</span>
+                                                <span class="hidden-md hidden-lg">+</span>
+                                            </button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="main-item">
+                                <div>
+                                    <div><div>&nbsp;</div></div>
+                                    <div>
+                                        <img class="item-image" src="images/placeholders/yogurt.png"/>
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="old-price"></p>
+                                        <p class="actual-price">17,00 <span class="units">руб./кг</span></p>
+                                        <p class="item-description">Морковь свежая, мытая</p>
+                                        <p class="item-country">Россия</p>
+                                        <p class="item-weight">0,8 - 1,2 кг</p>
+
+                                        <div class="item-rating">
+                                            <img src="images/placeholders/rating-placeholder.png" height="14"/>
+                                        </div>
+                                    </div>
+                                    <div class="item-interact">
+                                        <div>
+                                            <img src="images/theme/shape.svg"/>
+                                        </div>
+                                        <div>
+                                            <section class="count-section">
+                                                <button class="minus">-</button>
+                                                <input class="count" disabled value="1"/>
+                                                <button class="plus">+</button>
+
+                                            </section>
+                                            <button type="submit" class="btn-base btn-green">
+                                                <span class="hidden-xs hidden-sm">В корзину</span>
+                                                <span class="hidden-md hidden-lg">+</span>
+                                            </button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-item discount-type">
+                                <div>
+                                    <div><div>&nbsp;</div></div>
+                                    <div>
+                                        <img class="item-image" src="images/placeholders/flakes.png"/>
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="old-price"><span>29,90</span></p>
+                                        <p class="actual-price">17,00 <span class="units">руб./кг</span></p>
+                                        <p class="item-description">Морковь свежая, мытая</p>
+                                        <p class="item-country">Россия</p>
+                                        <p class="item-weight">0,8 - 1,2 кг</p>
+
+                                        <div class="item-rating">
+                                            <img src="images/placeholders/rating-placeholder.png" height="14"/>
+                                        </div>
+                                    </div>
+                                    <div class="item-interact">
+                                        <div>
+                                            <img src="images/theme/shape.svg"/>
+                                        </div>
+                                        <div>
+                                            <section class="count-section">
+                                                <button class="minus">-</button>
+                                                <input class="count" disabled value="1"/>
+                                                <button class="plus">+</button>
+
+                                            </section>
+                                            <button type="submit" class="btn-base btn-green">
+                                                <span class="hidden-xs hidden-sm">В корзину</span>
+                                                <span class="hidden-md hidden-lg">+</span>
+                                            </button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-item">
+                                <div>
+                                    <div><div>&nbsp;</div></div>
+                                    <div>
+                                        <img class="item-image" src="images/placeholders/juice.png"/>
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="old-price"><span>29,90</span></p>
+                                        <p class="actual-price">17,00 <span class="units">руб./кг</span></p>
+                                        <p class="item-description">Морковь свежая, мытая</p>
+                                        <p class="item-country">Россия</p>
+                                        <p class="item-weight">0,8 - 1,2 кг</p>
+
+                                        <div class="item-rating">
+                                            <img src="images/placeholders/rating-placeholder.png" height="14"/>
+                                        </div>
+                                    </div>
+                                    <div class="item-interact">
+                                        <div>
+                                            <img src="images/theme/shape.svg"/>
+                                        </div>
+                                        <div>
+                                            <section class="count-section">
+                                                <button class="minus">-</button>
+                                                <input class="count" disabled value="1"/>
+                                                <button class="plus">+</button>
+
+                                            </section>
+                                            <button type="submit" class="btn-base btn-green">
+                                                <span class="hidden-xs hidden-sm">В корзину</span>
+                                                <span class="hidden-md hidden-lg">+</span>
+                                            </button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-item hit-type">
+                                <div>
+                                    <div><div>&nbsp;</div></div>
+                                    <div>
+                                        <img class="item-image" src="images/placeholders/carrot.png"/>
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="old-price"><span>29,90</span></p>
+                                        <p class="actual-price">17,00 <span class="units">руб./кг</span></p>
+                                        <p class="item-description">Морковь свежая, мытая</p>
+                                        <p class="item-country">Россия</p>
+                                        <p class="item-weight">0,8 - 1,2 кг</p>
+
+                                        <div class="item-rating">
+                                            <img src="images/placeholders/rating-placeholder.png" height="14"/>
+                                        </div>
+                                    </div>
+                                    <div class="item-interact">
+                                        <div>
+                                            <img src="images/theme/shape.svg"/>
+                                        </div>
+                                        <div>
+                                            <section class="count-section">
+                                                <button class="minus">-</button>
+                                                <input class="count" disabled value="1"/>
+                                                <button class="plus">+</button>
+
+                                            </section>
+                                            <button type="submit" class="btn-base btn-green">
+                                                <span class="hidden-xs hidden-sm">В корзину</span>
+                                                <span class="hidden-md hidden-lg">+</span>
+                                            </button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-item new-type">
+                                <div>
+                                    <div><div>&nbsp;</div></div>
+                                    <div>
+                                        <img class="item-image" src="images/placeholders/carrot.png"/>
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="old-price"><span>29,90</span></p>
+                                        <p class="actual-price">17,00 <span class="units">руб./кг</span></p>
+                                        <p class="item-description">Морковь свежая, мытая</p>
+                                        <p class="item-country">Россия</p>
+                                        <p class="item-weight">0,8 - 1,2 кг</p>
+
+                                        <div class="item-rating">
+                                            <img src="images/placeholders/rating-placeholder.png" height="14"/>
+                                        </div>
+                                    </div>
+                                    <div class="item-interact">
+                                        <div>
+                                            <img src="images/theme/shape.svg"/>
+                                        </div>
+                                        <div>
+                                            <section class="count-section">
+                                                <button class="minus">-</button>
+                                                <input class="count" disabled value="1"/>
+                                                <button class="plus">+</button>
+
+                                            </section>
+                                            <button type="submit" class="btn-base btn-green">
+                                                <span class="hidden-xs hidden-sm">В корзину</span>
+                                                <span class="hidden-md hidden-lg">+</span>
+                                            </button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-right-arrow">
+                            <img src="images/theme/arrow-right.svg"/>
+                        </div>
+                        <div class="items-left-arrow">
+                            <img src="images/theme/arrow.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="images/theme/leafs.png"/>
+                    <img src="images/theme/footer-berries.png"/>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="col-sm-push-1 col-sm-3">
+                        <h3>
+                            Новые акции на каждой неделе
+                        </h3>
+                        <p>
+                            А письмо об акция не чаще 1 раза в месяц<br/>
+                            И никакого спама
+                        </p>
+                    </div>
+                    <div class="col-sm-push-1 col-sm-7">
+                        <form class="subscription-form">
+                            <div class="form-group">
+                                <input type="email" class="email-input" placeholder="Электронный адрес"/>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-xs-12 col-sm-7 col-md-8">
+                                    <input id="agreeWithTerms" type="checkbox" class="css-checkbox">
+                                    <label class="agreementLabel css-label" for="agreeWithTerms">
+                                         Я в курсе <a href="#" class="white-link">условий подписки</a> и не имею ничего против
+                                    </label>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-5 col-md-4 text-right">
+                                    <button type="submit" class="btn-base btn-md">
+                                        Хочу быть в курсе
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="col-lg-12 text-center footer-services">
+                        <ul class="list-inline">
+                            <li><img src="images/theme/yandex.png"/></li>
+                            <li><img src="images/theme/akit.png"/></li>
+                            <li><img src="images/theme/aeroflot.png"/></li>
+                            <li><img src="images/theme/assist.png"/></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+                        <p class="copyright">&copy; Smoroza.ru — умный супермаркет 2017</p>
+                    </div>
+                    <div class="col-sm-8 col-md-6">
+                        <ul class="list-inline footer-menu">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Покупателям</a></li>
+                            <li><a href="#">Поставщикам</a></li>
+                            <li><a href="#">Смороза Бизнес</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <ul class="list-inline socials">
+                            <li><a href="#"><img src="images/icons/vkontakte-logo.svg"/></a></li>
+                            <li><a href="#"><img src="images/icons/instagram.svg"/></a></li>
+                            <li><a href="#"><img src="images/icons/facebook.svg"/></a></li>
+                            <li><a href="#"><img src="images/icons/youtube-15.svg"/></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
